@@ -38,6 +38,15 @@
     })
   }
 
+  // const scrollto = (el) => {
+  //   let elementPos = select(el).offsetTop
+  //   window.scrollTo({
+  //     top: elementPos,
+  //     behavior: 'smooth'
+  //   })
+  // }
+
+
   /**
    * Mobile nav toggle
    */
@@ -58,6 +67,7 @@
       let navbar = select('#navbar')
       let header = select('#header')
       let sections = select('section', true)
+      let portfolio = select('#portfolio')
       let navlinks = select('#navbar .nav-link', true)
 
       navlinks.forEach((item) => {
@@ -130,6 +140,22 @@
       }
     }
   });
+
+  /**
+  * Header type effect
+  */
+  const typed = select('.typed')
+  if (typed) {
+    let typed_strings = typed.getAttribute('data-typed-items')
+    typed_strings = typed_strings.split(',')
+    new Typed('.typed', {
+      strings: typed_strings,
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
+    });
+  }
 
   /**
    * Porfolio isotope and filter

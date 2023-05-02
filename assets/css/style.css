@@ -58,6 +58,7 @@ h4,
 h5,
 h6 {
   font-family: "Poppins", sans-serif;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -72,28 +73,23 @@ h6 {
   z-index: 997;
   overflow-y: auto;
 }
-
 #header * {
   transition: ease-in-out 0.3s;
 }
-
 #header h1 {
-  max-width: 400px;
+  line-height: 1;
+  display: inline-block;
+  max-width: 510px;
   font-size: 48px;
   margin: 0;
   padding: 0;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 400;
   font-family: "Poppins", sans-serif;
 }
-
-#header h1 a,
-#header h1 a:hover {
-  color: #fff;
-  line-height: 1;
-  display: inline-block;
+#header h1 span {
+  font-weight: 700;
 }
-
 #header h2 {
   max-width: 740px;
   font-size: 24px;
@@ -101,22 +97,20 @@ h6 {
   margin-top: 20px;
   color: rgba(255, 255, 255, 0.8);
 }
-
 #header h2 span {
   color: #fff;
   border-bottom: 2px solid #18d26e;
   /* padding-bottom: 6px; */
 }
-
 #header h3 {
   display: none;
   color: #fff;
 }
-
 #header p {
-  display: block;
+  color: #e3e4e4;
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
 }
-
 .hello {
   width: fit-content;
   padding: 10px;
@@ -169,15 +163,11 @@ h6 {
     font-size: 20px;
     line-height: 30px;
   }
-
-  #header .social-links {
-    margin-top: 15px;
-  }
-
   #header .container {
     display: flex;
     flex-direction: column;
     align-items:flex-start;
+    justify-content: space-between;
   }
 }
 
@@ -306,7 +296,7 @@ h6 {
 */
 .mobile-nav-toggle {
   color: #fff;
-  font-size: 28px;
+  font-size: 30px;
   cursor: pointer;
   display: none;
   line-height: 0;
@@ -316,7 +306,7 @@ h6 {
   top: 15px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 591px) {
   .mobile-nav-toggle {
     display: block;
   }
@@ -371,6 +361,7 @@ h6 {
   font-size: 16px;
   position: relative;
 }
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -522,7 +513,7 @@ section .container {
 
 #dev-icons {
   margin: 2.5px;
-  font-size: 40px;
+  font-size: 30px;
   color: white;
 }
 

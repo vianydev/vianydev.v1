@@ -38,15 +38,6 @@
     })
   }
 
-  // const scrollto = (el) => {
-  //   let elementPos = select(el).offsetTop
-  //   window.scrollTo({
-  //     top: elementPos,
-  //     behavior: 'smooth'
-  //   })
-  // }
-
-
   /**
    * Mobile nav toggle
    */
@@ -67,7 +58,6 @@
       let navbar = select('#navbar')
       let header = select('#header')
       let sections = select('section', true)
-      let portfolio = select('#portfolio')
       let navlinks = select('#navbar .nav-link', true)
 
       navlinks.forEach((item) => {
@@ -125,6 +115,7 @@
         header.classList.add('header-top')
 
         navlinks.forEach((item) => {
+          
           if (item.getAttribute('href') == window.location.hash) {
             item.classList.add('active')
           } else {
@@ -215,7 +206,23 @@
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
-    }
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  /**
+ * Animation on scroll
+ */
+  window.addEventListener('load', () => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    })
   });
 
 })()
